@@ -1,17 +1,19 @@
 package com.gymgroup.controller;
 
-
 import com.gymgroup.entities.Contact;
 import com.gymgroup.entities.Product;
+import com.gymgroup.entities.ShipmentInfo;
+
 import com.gymgroup.service.ContactService;
 import com.gymgroup.service.OrderService;
 import com.gymgroup.service.ProductService;
+import com.gymgroup.service.ShipmentInfoService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-import javax.ws.rs.GET;
 import java.util.List;
 
 @RestController
@@ -26,6 +28,9 @@ public class JsonController {
 
     @Autowired
     ContactService contactService;
+
+    @Autowired
+    ShipmentInfoService shipmentService;
 
     @GetMapping
     public ResponseEntity<List<Product>> AllProducts() {
@@ -81,7 +86,6 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
 
-
     @GetMapping("/multigyms")
     public ResponseEntity<List<Product>> getMultigyms() {
         List<Product> list = service.getMultigyms();
@@ -124,8 +128,10 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
 
+    @PostMapping("/createShipping")
+    public ResponseEntity<Shipmentinfo> getShippingInfo(ShipmentInfo shipmentinfo) {
+        shipmentService.save(shipmentinfo);
+        return null;
+    }
 
 }
-
-
-

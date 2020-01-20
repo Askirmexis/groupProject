@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
@@ -42,8 +42,7 @@
                     <label for="exampleInputEmail1">Email address *</label>
                     <form:input path="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                            placeholder="Enter e-mail"/>
-                    <form:errors path="email" cssClass="error"/>
-                    
+                    <form:errors path="email" cssClass="error"/>            
                 </div>
                 <div class="col-sm form-group">
                     <label for="Lname">Last Name *</label>

@@ -10,7 +10,7 @@ async function displayProducts() {
     //load the cart items
     showCart();
     minandmax(data);
-
+loadBrandsFilter(data);
     data.forEach(createProductArticles);
 }
 

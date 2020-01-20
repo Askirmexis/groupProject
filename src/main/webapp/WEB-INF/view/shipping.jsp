@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 
     <head>
@@ -21,26 +22,26 @@
 
         <style>
 
+
+
+
+            /*            @importurl (https://fonts.googleapis.com/css?family=Roboto);
             
-
-
-/*            @importurl (https://fonts.googleapis.com/css?family=Roboto);
-
-            @import "compass/css3";
-
-            @keyframesripple {
-                0% {
-                    box-shadow:0px0px0px1pxrgba(0,0,0,0);
-                }
-
-                50% {
-                    box-shadow:0px0px0px15pxrgba(0,0,0,0.1);
-                }
-
-                100% {
-                    box-shadow:0px0px0px15pxrgba(0,0,0,0);
-                }
-            }*/
+                        @import "compass/css3";
+            
+                        @keyframesripple {
+                            0% {
+                                box-shadow:0px0px0px1pxrgba(0,0,0,0);
+                            }
+            
+                            50% {
+                                box-shadow:0px0px0px15pxrgba(0,0,0,0.1);
+                            }
+            
+                            100% {
+                                box-shadow:0px0px0px15pxrgba(0,0,0,0);
+                            }
+                        }*/
 
             .md-radio {
                 margin:16px0;
@@ -117,18 +118,18 @@
                     <br>
                     <form>
                         <div class="wrapper col-12 px-0">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input id="semail" required type="text" class="form-control" placeholder="Email">
                         </div>
-
+                        
                         <div class="container-fluid col-12 px-0" style="padding-top: 10px;">
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" class="form-control" placeholder="First name">
+                                    <input id="sfname" required type="text" class="form-control" placeholder="First name">
 
 
                                 </div>
                                 <div class="col-6" style="padding-left:0;">
-                                    <input type="text" class="form-control" placeholder="Last name">
+                                    <input id="slname" required  type="text" class="form-control" placeholder="Last name">
                                 </div>
                             </div>
                         </div>
@@ -137,29 +138,29 @@
                             <h5 style="color:dimgray;">Shipping Address</h5>
                         </div>
                         <div class="wrapper col-12 px-0" style="padding-top: 10px;">
-                            <input type="text" class="form-control" placeholder="Company (Optional)">
+                            <input id="scompany" required type="text" class="form-control" placeholder="Company (Optional)">
                         </div>
                         <div class="wrapper col-12 px-0" style="padding-top: 10px;">
-                            <input type="text" class="form-control" placeholder="Address">
+                            <input id="saddress" required type="text" class="form-control" placeholder="Address">
                         </div>
                         <div class="wrapper col-12 px-0" style="padding-top: 10px;">
-                            <input type="text" class="form-control" placeholder="City">
+                            <input id="scountry" required type="text" class="form-control" placeholder="Country">
                         </div>
                         <div class="container-fluid col-12 px-0" style="padding-top: 10px;">
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" class="form-control" placeholder="Country">
+                                    <input id="scity" required type="text" class="form-control" placeholder="city">
 
 
                                 </div>
                                 <div class="col-6" style="padding-left:0;">
-                                    <input type="text" class="form-control" placeholder="Postal Code">
+                                    <input id="szip" required  type="text" class="form-control" placeholder="Postal Code">
                                 </div>
                             </div>
                         </div>
 
                         <div class="wrapper col-12 px-0" style="padding-top: 10px;">
-                            <input type="telephone" class="form-control" placeholder="Telephone">
+                            <input id="stelephone" required type="telephone" class="form-control" placeholder="Telephone">
                         </div>
                         <hr><br>
 
@@ -188,7 +189,7 @@
                                 <div class="col-6">
                                     <a href="#" style="color: grey;">
                                         < Return to cart</a> </div> <div class="col-6" style="padding-left:0;">
-                                    <button type="submit" class="btn btn-success"
+                                    <button type="submit" id="payButton" class="btn btn-success"
                                             style="border-radius: 0;background-color: olivedrab;width:100%">Pay</button>
                                 </div>
                             </div>
@@ -197,78 +198,119 @@
 
                     </form>
 
+            </div>
+
+
+            <div class="col-5 container-fluid py-0 vh-100" style="background-color:rgb(249, 250, 245);padding-top:0">
+                <br>
+                <div id="shipping-cart-items" class="container-fluid px-0 offset-md-1 col-11">
+
                 </div>
-
-
-                <div class="col-5 container-fluid py-0 vh-100" style="background-color:rgb(249, 250, 245);padding-top:0">
-                    <br>
-                    <div id="shipping-cart-items" class="container-fluid px-0 offset-md-1 col-11">
-
+                <br>
+                <hr>
+                <br>
+                <div class="wrapper col-12 flex">
+                    <div class="row">
+                        <span class="col-9" style="color:grey"><strong>Subtotal</strong></span>
+                        <span class="col-3 align-self-end" style="text-align: end;"><strong id="totalBeforeShipping">100.00</strong></span>
                     </div>
-                    <br>
-                    <hr>
-                    <br>
-                    <div class="wrapper col-12 flex">
-                        <div class="row">
-                            <span class="col-9" style="color:grey"><strong>Subtotal</strong></span>
-                            <span class="col-3 align-self-end" style="text-align: end;"><strong id="totalBeforeShipping">100.00</strong></span>
-                        </div>
+                </div>
+                <br>
+                <div class="wrapper col-12 flex">
+                    <div class="row">
+                        <span class="col-9" style="color:grey"><strong>Shipping</strong></span>
+                        <span class="col-3 align-self-end" style="text-align: end;"><strong id="shippingCost">14.00</strong></span>
                     </div>
-                    <br>
-                    <div class="wrapper col-12 flex">
-                        <div class="row">
-                            <span class="col-9" style="color:grey"><strong>Shipping</strong></span>
-                            <span class="col-3 align-self-end" style="text-align: end;"><strong id="shippingCost">14.00</strong></span>
-                        </div>
-                    </div>
-                    <br>
-                    <hr>
-                    <div class="wrapper col-12 flex">
-                        <div class="row">
-                            <span class="col-9"><h5>Total</h5></span>
-                            <span class="col-3 align-self-end" style="text-align: end;"><h4 id="totalAfterShipping">100.00</h4></span>
-                        </div>
+                </div>
+                <br>
+                <hr>
+                <div class="wrapper col-12 flex">
+                    <div class="row">
+                        <span class="col-9"><h5>Total</h5></span>
+                        <span class="col-3 align-self-end" style="text-align: end;"><h4 id="totalAfterShipping">100.00</h4></span>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            $("#goToPayment").on("click", function (ev) {
-                location.href = "${pageContext.request.contextPath}/payment";
-            });
-            let _contents = localStorage.getItem('bkasjbdfkjasdkfjhaksdfjskd');
-            let cart = JSON.parse(_contents);
-            console.log(cart);
-            let totalBeforeShipping = 0;
-            cart.forEach(item => {
-                $("#shipping-cart-items").append(
-                        `<hr>
-                      <div class="row">
-                            <div class="col-sm px-0 container-fluid">
-                                <img src="` + item.thumbnail + `"
-                                    alt="..." class="img-thumbnail" style="max-width:150px">
-                            </div>
-                            <div class="col-sm align-self-center text-left flex-wrap px-0">
-                                <span>` + item.qty + `x : ` + item.name
-                        + `</span>
-                            </div>
-                            <div class="col-sm align-self-center text-right flex-wrap">
-                                <span class="align-self-end">` + item.price + `</span>
-                            </div>
+    </div>
+    <script>
+        $("#goToPayment").on("click", function (ev) {
+            location.href = "${pageContext.request.contextPath}/payment";
+        });
+        let _contents = localStorage.getItem('bkasjbdfkjasdkfjhaksdfjskd');
+        let cart = JSON.parse(_contents);
+        console.log(cart);
+        let totalBeforeShipping = 0;
+        cart.forEach(item => {
+            $("#shipping-cart-items").append(
+                    `<hr>
+                  <div class="row">
+                        <div class="col-sm px-0 container-fluid">
+                            <img src="` + item.thumbnail + `"
+                                alt="..." class="img-thumbnail" style="max-width:150px">
                         </div>
-                `
-                        );
-                totalBeforeShipping = totalBeforeShipping + (item.price * item.qty);
-            });
+                        <div class="col-sm align-self-center text-left flex-wrap px-0">
+                            <span>` + item.qty + `x : ` + item.name
+                    + `</span>
+                        </div>
+                        <div class="col-sm align-self-center text-right flex-wrap">
+                            <span class="align-self-end">` + item.price + `</span>
+                        </div>
+                    </div>
+            `
+                    );
+            totalBeforeShipping = totalBeforeShipping + (item.price * item.qty);
+        });
 
-            $("#totalBeforeShipping").html(parseFloat(totalBeforeShipping).toFixed(2));
-            const shiptemp = parseInt($("#shippingCost").html());
-            $("#totalAfterShipping").html(parseFloat(totalBeforeShipping + shiptemp).toFixed(2));
-
-        </script>
+        $("#totalBeforeShipping").html(parseFloat(totalBeforeShipping).toFixed(2));
+        const shiptemp = parseInt($("#shippingCost").html());
+        $("#totalAfterShipping").html(parseFloat(totalBeforeShipping + shiptemp).toFixed(2));
 
 
 
-    </body>
+
+        jQuery(document).ready(
+	function($) {
+
+		$("#payButton").click(function(event) {
+
+			var data = {}
+			data["email"] = $("#semail").val();
+			data["fname"] = $("#sfname").val();
+			data["lname"] = $("#slname").val();
+			data["company"] = $("#scompany").val();
+			data["address"] = $("#saddress").val();
+			data["city"] = $("#scity").val();
+			data["country"] = $("#scountry").val();
+			data["zip"] = $("#szip").val();
+			data["telephone"] = $("#stelephone").val();
+			
+
+			$("#payButton").prop("disabled", true);
+
+			$.ajax({
+		             type: "POST",
+		             contentType: "application/json",
+		             url: "${pageContext.request.contextPath}/json/createShipping",
+		             data: JSON.stringify(data),
+		             dataType: 'json',
+		             timeout: 600000,
+		             success: function (data) {
+		               console.log("SUCCCESSSS");
+		             },
+		             error: function (e) {
+		                 console.log("ERROR ERRORR");
+		             }
+			});
+		
+
+		});
+
+	});
+    </script>
+
+
+
+</body>
 
 </html>

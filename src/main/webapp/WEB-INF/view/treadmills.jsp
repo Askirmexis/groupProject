@@ -119,12 +119,20 @@
                                  style="min-height:100%">
 
                             <div class="flex-grow-1 p-3 o-xh o-ya">
-                                <div id="price" class="row justify-content-between"> <a>Price</a>
+                                <div id="price" class="row"> <a>Price </a>
                                     <a id="pricevalue">max:
-                                        </a><br>
+                                    </a><br>
                                     <input class="form-control" value="5000" id="pricerange" type="range" min="50" max="5000" />
+                                    <br>
+
+
+                                </div>
+                                <hr>
+                                <div id="brandFilter">
+
                                 </div>
                             </div>
+
                             <aside>
                                 <div class="d-flex justify-content-between">
                                     <div class="p-3">
@@ -175,16 +183,45 @@
                     const temp = renderProduct(products[i], i + 1);
                     $("#pil").append(temp);
                 }
+                const brandschecked = [];
+                $('#brandFilter').find('input').each(function () {
+                    var innerid = $(this).attr('id');
+                    var checkBox = document.getElementById(innerid);
+                    let temp2 = $("#label" + innerid).html();
+//                    console.log(temp2);
+                    if (checkBox.checked === true) {
+                        if (!brandschecked.includes(temp2)) {
+                            brandschecked.push(temp2);
+                        }
+                    }
+                });
+                console.log(brandschecked);
                 for (let i = 1; i < products.length + 1; i++) {
-                  
+
+                    // price range filter
+
                     if (parseFloat(products[i - 1].price) > document.getElementById("pricerange").value) {
-                        console.log($("#pil").html());
-                        console.log("the product id isssss" + products[i - 1].productId);
+
                         $("#product" + products[i - 1].productId).remove();
                     }
-                }
-            }
 
+
+                    // brand filters 
+
+                    let bool = true;
+                    brandschecked.forEach(item => {
+                        if (products[i - 1].brandByBrandId.brands === item) {
+                            bool = false;
+                        }
+                    });
+                    if (bool) {
+                        $("#product" + products[i - 1].productId).remove();
+                    }
+
+                }
+                ;
+
+            }
 
 
             function myFunction(id) {
@@ -193,9 +230,7 @@
             ;
             function minandmax(products) {
                 let min = 1000000;
-               
                 let max = 0;
-                console.log("this is it" + products);
                 for (let i = 0; i < products.length; i++) {
                     console.log(products[i].price);
                     if (products[i].price < min) {
@@ -205,17 +240,34 @@
                         max = products[i].price;
                     }
                 }
-                console.log(max);
-                console.log("this is the min---" + min);
+
                 document.getElementById("pricevalue").innerHTML = ' max:' + max + '';
                 $("#pricerange").attr({
-                    'value' : max,
+                    'value': max,
                     'min': min,
                     'max': max
                 });
             }
+            const brands = [];
+            function loadBrandsFilter(products) {
 
+                for (let i = 0; i < products.length; i++) {
+                    let temp = products[i].brandByBrandId.brands;
+                    if (!brands.includes(temp)) {
+                        brands.push(temp);
+                        $("#brandFilter").append(` <input type="checkbox" id="brand` + products[i].brandByBrandId.brandId + `" onclick="mmyf(` + products[i].brandByBrandId.brandId + `)">
+        <label id="labelbrand` + products[i].brandByBrandId.brandId + `" style="padding-left: 10px;" for="brand` + products[i].brandByBrandId.brandId + `">` + temp + `</label><br>`);
+                    }
+                }
+            }
 
+            function mmyf(id) {
+//                console.log(id);
+                var checkBox = document.getElementById("brand" + id);
+
+                filterThing(products);
+
+            }
 
             //    $("#addcart")on("click",function (){
             //        $("#cart-items").append(`<li class="clearfix">
