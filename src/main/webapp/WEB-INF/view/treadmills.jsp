@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{tagTitle}</title>
+        <title></title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
               integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -121,8 +121,8 @@
                             <div class="flex-grow-1 p-3 o-xh o-ya">
                                 <div id="price" class="row justify-content-between"> <a>Price</a>
                                     <a id="pricevalue">max:
-                                        $5,000</a><br>
-                                    <input class="form-control" value="1800" id="pricerange" type="range" min="50" max="5000" />
+                                        </a><br>
+                                    <input class="form-control" value="5000" id="pricerange" type="range" min="50" max="5000" />
                                 </div>
                             </div>
                             <aside>
@@ -176,9 +176,8 @@
                     $("#pil").append(temp);
                 }
                 for (let i = 1; i < products.length + 1; i++) {
-                    console.log("this is the price of the product--" + parseFloat(products[i - 1].price));
-                    console.log("This is the value we range" + document.getElementById("pricerange").value);
-                    if (parseFloat(products[i - 1].price) >= document.getElementById("pricerange").value) {
+                  
+                    if (parseFloat(products[i - 1].price) > document.getElementById("pricerange").value) {
                         console.log($("#pil").html());
                         console.log("the product id isssss" + products[i - 1].productId);
                         $("#product" + products[i - 1].productId).remove();
@@ -192,7 +191,29 @@
                 addItem(id);
             }
             ;
-
+            function minandmax(products) {
+                let min = 1000000;
+               
+                let max = 0;
+                console.log("this is it" + products);
+                for (let i = 0; i < products.length; i++) {
+                    console.log(products[i].price);
+                    if (products[i].price < min) {
+                        min = products[i].price;
+                    }
+                    if (products[i].price > max) {
+                        max = products[i].price;
+                    }
+                }
+                console.log(max);
+                console.log("this is the min---" + min);
+                document.getElementById("pricevalue").innerHTML = ' max:' + max + '';
+                $("#pricerange").attr({
+                    'value' : max,
+                    'min': min,
+                    'max': max
+                });
+            }
 
 
 

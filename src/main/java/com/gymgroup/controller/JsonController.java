@@ -35,7 +35,6 @@ public class JsonController {
 
     @GetMapping("/treadmills")
     public ResponseEntity<List<Product>> Treadmills() {
-
         List<Product> list = service.getTreadmills();
         return ResponseEntity.ok().body(list);
     }

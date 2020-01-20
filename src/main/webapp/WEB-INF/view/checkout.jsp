@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
 
-      
+
         <style>
 
         </style>
@@ -55,20 +55,18 @@
             </div>
         </main>
         <script>
-            (function disable() {
-               document.getElementById("checkoutC").disabled = true;
-            }) 
+            console.log("asdhuasdhausdhua");
+            document.getElementById("checkoutC").disabled = true;
+
 
             function activateButton(element) {
-
+console.log("this is ne here");
                 if (element.checked) {
                     document.getElementById("checkoutC").disabled = false;
-                } else {
-                    document.getElementById("checkoutC").disabled = true;
                 }
-
             }
             $("#checkoutC").on("click", function (ev) {
+                ev.preventDefault();
                 location.href = "${pageContext.request.contextPath}/shipping";
             });
             let _contents = localStorage.getItem('bkasjbdfkjasdkfjhaksdfjskd');
@@ -76,7 +74,7 @@
             let totalBeforeShipping = 0;
             CART.init();
             showCart();
-            if (cart.length!=0) {
+            if (cart.length != 0) {
                 $("#checkoutContainer").empty();
             }
             cart.forEach(item => {

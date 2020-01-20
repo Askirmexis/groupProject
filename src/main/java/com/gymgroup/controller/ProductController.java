@@ -31,9 +31,9 @@ public class ProductController {
     @Autowired
     BrandService brandService;
 
-    @GetMapping()
+    @GetMapping
     public String viewProduct() {
-        return "allproducts";
+        return "treadmills";
     }
 
     @GetMapping("/{tag}")

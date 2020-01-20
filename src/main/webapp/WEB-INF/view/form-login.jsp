@@ -1,5 +1,6 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,7 +36,8 @@
             }
         </style>
     </head>
-
+        <jsp:include page="navbar.jsp"/>
+        <br>
         <div class="col-sm-10 offset-md-1">
             <h3 style="color: gray;">Login or Create an Account</h3>
             <hr>
@@ -85,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid col-sm-10 offset-md-1">
                 <div class="row">
                     <div class="col-sm">
                         <hr>
@@ -98,11 +100,14 @@
                     <div class="col-sm">
                         <hr>
                         <div class="container">
-
+                            <div class="row">
+                            <div class="col" style="width:50%">
                             <a><strong>Forgot your Password?</strong></a>
-                            <div style="text-align: right ; padding: 0 ; margin: 0">
+                            </div>
+                            <div class="col" style="text-align: right ; padding: 0 ; margin: 0 ;width:50%">
                                 
                                 <button type="submit" class="btn btn-primary" value="Login">Login</button>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -110,12 +115,20 @@
             </div>
         </form:form>
         <br>
-        <hr>
-        <div class="col-sm-10 offset-md-1" style="font-stretch: expanded">
-            <h3 style="color: darkslategray"><strong>WE'RE ALWAYS HAPPY TO HEAR FROM YOU</strong></h3>
-        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <jsp:include page="footer.jsp"/>
+        
 
-        <div class="login-form">
+
+
+
+
+
+        
+            <!--
             <c:if test="${param.error !=null}">
                 <div class="alert alert-danger">
                     <i>Invalid username/password</i>
@@ -126,20 +139,7 @@
                     <i>Logged out successfully</i>
                 </div>
             </c:if>
-
-            <form:form action="${pageContext.request.contextPath}/authenticate" method="POST">
-                <h2 class="text-center">Log in</h2>       
-                <div class="form-group">
-                    <input name="username" type="text" class="form-control" placeholder="Username" required="required">
-                </div>
-                <div class="form-group">
-                    <input name="password" type="password" class="form-control" placeholder="Password" required="required">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
-                </div>
-            </form:form>
-
-        </div>
+            -->
+        
     
 </html>                                		                            

@@ -14,44 +14,7 @@
         </style>
     </head>
     <body>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+        <jsp:include page="navbar.jsp"/>
         <br>
         <br>
         <div class="text-center">
@@ -80,20 +43,20 @@
                     <form:input path="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                            placeholder="Enter e-mail"/>
                     <form:errors path="email" cssClass="error"/>
-                    <br>
-                    <label for="postcode">Postcode *</label>
-                    <form:input path="zip" type="text" class="form-control" id="postcode" placeholder="Enter postcode"/>
-                    <form:errors path="zip" cssClass="error"/>
+                    
                 </div>
                 <div class="col-sm form-group">
                     <label for="Lname">Last Name *</label>
                     <form:input path="lname" type="text" class="form-control" id="Lname" placeholder="Enter last name"/>
                     <br>
+                    <label for="postcode">Postcode *</label>
+                    <form:input path="zip" type="text" class="form-control" id="postcode" placeholder="Enter postcode"/>
+                    <form:errors path="zip" cssClass="error"/>
                     <!--
                     label for="phone" class="col-form-label">Telephone</label>
                     form:input path="phone" class="form-control" type="tel" id="phone" placeholder="Enter phone number"/>
                     -->
-                    <br>
+                    
                     <!--
                     label for="City">City *</label>
                     form:input path="city" type="text" class="form-control" id="City" placeholder="Enter city"/>
@@ -143,15 +106,12 @@
         </div>
         </form:form>
         <br>
-        <hr>
-        <div class="col-sm-10 offset-md-1" style="font-stretch: expanded">
-            <h3 style="color: darkslategray"><strong>WE'RE ALWAYS HAPPY TO HEAR FROM YOU</strong></h3>
-        </div>
+        <jsp:include page="footer.jsp"/>
 
 
 
 
-
+        <!--
         <h1>Registration Form</h1>
         <form:form 
             action="${pageContext.request.contextPath}/admin/register/processRegistration" 
@@ -183,6 +143,7 @@
             </p>
             <input type="submit" value="Register">
         </form:form>
+        -->
     </body>
 </html>
 

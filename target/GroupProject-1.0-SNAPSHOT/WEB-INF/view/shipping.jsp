@@ -18,6 +18,89 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
                 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+        <style>
+
+            
+
+
+/*            @importurl (https://fonts.googleapis.com/css?family=Roboto);
+
+            @import "compass/css3";
+
+            @keyframesripple {
+                0% {
+                    box-shadow:0px0px0px1pxrgba(0,0,0,0);
+                }
+
+                50% {
+                    box-shadow:0px0px0px15pxrgba(0,0,0,0.1);
+                }
+
+                100% {
+                    box-shadow:0px0px0px15pxrgba(0,0,0,0);
+                }
+            }*/
+
+            .md-radio {
+                margin:16px0;
+            }
+
+            .md-radio.md-radio-inline {
+                display:inline-block;
+            }
+
+            .md-radioinput[type="radio"] {
+                display:none;
+            }
+
+            .md-radioinput[type="radio"]:checked+label:before {
+                border-color:#337ab7;
+                animation: ripple 0.2slinearforwards;
+            }
+
+            .md-radioinput[type="radio"]:checked+label:after {
+                transform:scale(1);
+            }
+
+            .md-radiolabel {
+                display:inline-block;
+                height:20px;
+                position:relative;
+                padding:030px;
+                margin-bottom:0;
+                cursor:pointer;
+                vertical-align:bottom;
+            }
+
+            .md-radiolabel:before,
+            .md-radiolabel:after {
+                position:absolute;
+                content:'';
+                border-radius:50%;
+                transition:all.3sease;
+                transition-property: transform, border-color;
+            }
+
+            .md-radiolabel:before {
+                left:0;
+                top:0;
+                width:20px;
+                height:20px;
+                border:2pxsolidrgba(0,0,0,0.54);
+            }
+
+            .md-radiolabel:after {
+                top:5px;
+                left:5px;
+                width:10px;
+                height:10px;
+                transform:scale(0);
+                background:#337ab7;
+            }
+
+
+        </style>
     </head>
 
     <body>
