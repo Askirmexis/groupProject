@@ -35,4 +35,13 @@ public class HomeController {
         return "user";
     }
     
+    @GetMapping("/shipping")
+    public String shipping(){
+        return "shipping";
+    }
+    
+    @GetMapping("/checkout")
+    public String checkout(){
+        return "checkout";
+    }
 }

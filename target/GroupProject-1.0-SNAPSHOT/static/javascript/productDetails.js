@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/GroupProject_war_exploded/json/productDetails";
+const URL = "http://localhost:8080/GroupProject/json/productDetails";
 
 
 async function displayOneProduct() {
@@ -26,7 +26,6 @@ function createProductArticle(product) {
  <button>add to cart</button>
 </article>  `;
     $("#body").append(productStuff);
-    document.title=`${product.name}`;
 }
 
 

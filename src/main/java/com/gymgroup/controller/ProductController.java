@@ -28,7 +28,6 @@ public class ProductController {
     @Autowired
     TagsService tagsService;
 
-
     @Autowired
     BrandService brandService;
 
@@ -37,62 +36,13 @@ public class ProductController {
         return "allproducts";
     }
 
-    @GetMapping("/treadmill")
-    public String viewTreadmill() {
+    @GetMapping("/{tag}")
+    public String viewElliptical(@PathVariable("tag") String title, Model model) {
+        model.addAttribute("tagTitle", title);
         return "treadmills";
     }
 
-    @GetMapping("/elliptical")
-    public String viewElliptical() {
-        return "elliptical";
-    }
-
-    @GetMapping("/bike")
-    public String viewBike() {
-        return "bikes";
-    }
-
-    @GetMapping("/rower")
-    public String viewRowers() {
-        return "rower";
-    }
-
-    @GetMapping("/bench")
-    public String viewBench() {
-        return "bench";
-    }
-
-    @GetMapping("/weight-Bar")
-    public String viewWeightBars() {
-        return "weight-bars";
-    }
-
-    @GetMapping("/kettlebell")
-    public String viewKettleBell() {
-        return "kettlebell";
-    }
-
-    @GetMapping("/dumbbell")
-    public String viewDumbell() {
-        return "dumbbell";
-    }
-
-    @GetMapping("/multigym")
-    public String viewMultigyms() {
-        return "multigyms";
-    }
-
-    @GetMapping("/tol")
-    public String viewTools() {
-        return "tools";
-    }
-
-    @GetMapping("/brands")
-    public String testingStuff() {
-        return "brandFilters";
-    }
-
-    @GetMapping("/{id}")
+    @GetMapping("/product/{id}")
     public String getSingleProduct(@PathVariable("id") int id, Model model) {
         Product p = productService.findProductById(id);
         model.addAttribute("productId", p.getProductId());

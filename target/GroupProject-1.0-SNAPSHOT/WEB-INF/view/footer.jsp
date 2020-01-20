@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: school
-  Date: 1/19/2020
-  Time: 11:26 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Footer</title>
@@ -13,7 +6,7 @@
 <body>
 
 <footer class="footer">
-    <div class="container col-12 text-center "
+<!--    <div class="container col-12 text-center "
          style="border-top: 1px dotted grey; background-color:rgb(248, 246, 242);">
         <hr>
         <h3>WE ARE ALWAYS HAPPY TO HEAR FROM YOU</h3>
@@ -83,7 +76,7 @@
 
         </div>
 
-    </div>
+    </div>-->
 </footer>
 
 </body>
