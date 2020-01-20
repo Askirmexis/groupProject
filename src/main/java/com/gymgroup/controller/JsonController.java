@@ -129,8 +129,8 @@ public class JsonController {
     }
 
     @PostMapping("/createShipping")
-    public ResponseEntity<Shipmentinfo> getShippingInfo(ShipmentInfo shipmentinfo) {
-        shipmentService.save(shipmentinfo);
+    public ResponseEntity<String> create(@RequestBody ShipmentInfo sinfo) {
+        shipmentService.save(sinfo);
         return null;
     }
 
