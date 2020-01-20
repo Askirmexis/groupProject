@@ -6,6 +6,7 @@
 package com.gymgroup.dao;
 
 import com.gymgroup.entities.Product;
+import org.w3c.dom.ls.LSException;
 
 import java.util.List;
 
@@ -20,9 +21,29 @@ public interface ProductDao {
 
     List<Product> findTreadmills();
 
-    List<Product>  findBikes();
+    List<Product> findBikes();
 
-    List<Product>  findElliptical();
+    List<Product> findElliptical();
+
+    List<Product> findBenches();
+
+    List<Product> findRowers();
+
+    List<Product> findWeightBars();
+
+    List<Product> findKettlebell();
+
+    List<Product> findDumbbell();
+
+    List<Product> findMultigyms();
+
+    List<Product> findTools();
+
+    List<Product> findCardio();
+
+    List<Product> findStrength();
+
+    List<Product> findFunctionality();
 
     //public List<Product> findProductsByName(String searchName);
 

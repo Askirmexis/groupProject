@@ -11,11 +11,15 @@
     <title>Title</title>
 </head>
 <body>
+<%@include file="navbar.jsp" %>
+
 <ul>
     <li><a href="${pageContext.request.contextPath}/products/treadmills">Treadmills</a></li>
     <li><a href="${pageContext.request.contextPath}/products/bikes">Bikes</a></li>
     <li><a href="${pageContext.request.contextPath}/products/elliptical">Elliptical</a></li>
 </ul>
 
+
+<%@include file="footer.jsp"%>
 </body>
 </html>

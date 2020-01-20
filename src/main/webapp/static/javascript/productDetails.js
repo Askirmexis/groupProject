@@ -26,6 +26,7 @@ function createProductArticle(product) {
  <button>add to cart</button>
 </article>  `;
     $("#body").append(productStuff);
+    document.title=`${product.name}`;
 }
 
 

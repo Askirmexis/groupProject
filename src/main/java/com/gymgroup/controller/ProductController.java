@@ -1,7 +1,11 @@
 package com.gymgroup.controller;
 
+import com.gymgroup.entities.Brand;
 import com.gymgroup.entities.Product;
+import com.gymgroup.entities.Tags;
+import com.gymgroup.service.BrandService;
 import com.gymgroup.service.ProductService;
+import com.gymgroup.service.TagsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -10,6 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.jws.WebParam;
+import javax.ws.rs.PathParam;
+import java.util.List;
+
 @Controller
 @RequestMapping("/products")
 public class ProductController {
@@ -17,12 +25,19 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
+    @Autowired
+    TagsService tagsService;
+
+
+    @Autowired
+    BrandService brandService;
+
     @GetMapping()
     public String viewProduct() {
         return "allproducts";
     }
 
-    @GetMapping("/treadmills")
+    @GetMapping("/treadmill")
     public String viewTreadmill() {
         return "treadmills";
     }
@@ -32,7 +47,7 @@ public class ProductController {
         return "elliptical";
     }
 
-    @GetMapping("/bikes")
+    @GetMapping("/bike")
     public String viewBike() {
         return "bikes";
     }
@@ -47,7 +62,7 @@ public class ProductController {
         return "bench";
     }
 
-    @GetMapping("/weight-Bars")
+    @GetMapping("/weight-Bar")
     public String viewWeightBars() {
         return "weight-bars";
     }
@@ -62,12 +77,12 @@ public class ProductController {
         return "dumbbell";
     }
 
-    @GetMapping("/multigyms")
+    @GetMapping("/multigym")
     public String viewMultigyms() {
         return "multigyms";
     }
 
-    @GetMapping("/Tools")
+    @GetMapping("/tol")
     public String viewTools() {
         return "tools";
     }
@@ -78,10 +93,40 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public String get(@PathVariable("id") int id, Model model) {
+    public String getSingleProduct(@PathVariable("id") int id, Model model) {
         Product p = productService.findProductById(id);
         model.addAttribute("productId", p.getProductId());
-        model.addAttribute("productName", p.getName());
         return "productDetails";
     }
+
+    //    @GetMapping("/{title}")
+//    public String testMapping(@PathVariable("title") String title) {
+//        return "test";
+//    }
+    @GetMapping("/cardio")
+    public String getCardio() {
+        return "cardio";
+    }
+//
+
+    @GetMapping("/strength")
+    public String getStrength() {
+        return "strength";
+    }
+
+    @GetMapping("/functionality")
+    public String getFunctionality() {
+        return "functionality";
+    }
+
+    @GetMapping("/product-form")
+    public String showForm(Model m) {
+        List<Tags> listTags = tagsService.findAll();
+        m.addAttribute("listOfTags", listTags);
+        List<Brand> listBrands = brandService.findAll();
+        m.addAttribute("listOfBrands", listBrands);
+        return "product-form";
+
+    }
+
 }

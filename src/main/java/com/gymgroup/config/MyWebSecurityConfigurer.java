@@ -46,8 +46,9 @@ public class MyWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()//Restrict access based on HttpServletRequest
                 //.anyRequest().authenticated()//Any request to the app must be authenticated(logged in)
                 .antMatchers("/static").permitAll()
+                .antMatchers("/").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/products/**", "/json/**","/user/**","/order/**").hasAnyRole("USER","ADMIN")
+                .antMatchers("/products/**", "/json/**","/user/**","/order/**").permitAll()
                 .and()
                 .formLogin() //We are customizing the form login process
                 .loginPage("/loginPage")  // Show my form at the request mapping

@@ -47,10 +47,56 @@ public class ProductServiceImpl implements ProductService {
         return pdao.findBikes();
     }
 
-//    @Override
-//    public List<Product> findProductsByName(String searchName) {
-//        List<Product> list = pdao.findProductsByName(searchName);
-//        return list;
-//    }
+    @Override
+    public List<Product> getBenches() {
+        return pdao.findBenches();
+    }
+
+
+    @Override
+    public List<Product> getRowers() {
+        return pdao.findRowers();
+    }
+
+    @Override
+    public List<Product> getWeightBars() {
+        return null;
+    }
+
+
+    @Override
+    public List<Product> getKettlebell() {
+        return pdao.findKettlebell();
+    }
+
+    @Override
+    public List<Product> getDumbbell() {
+        return pdao.findDumbbell();
+    }
+
+    @Override
+    public List<Product> getMultigyms() {
+        return pdao.findMultigyms();
+    }
+
+    @Override
+    public List<Product> getTools() {
+        return pdao.findTools();
+    }
+
+    @Override
+    public List<Product> getCardio() {
+        return pdao.findCardio();
+    }
+
+    @Override
+    public List<Product> getStrength() {
+        return pdao.findStrength();
+    }
+
+    @Override
+    public List<Product> getFunctionality() {
+        return pdao.findFunctionality();
+    }
 
 }

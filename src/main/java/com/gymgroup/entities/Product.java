@@ -149,7 +149,6 @@ public class Product implements Serializable {
     public String toString() {
         return "Product{" +
                 "name='" + name + '\'' +
-                ", description='" + description + '\'' +
                 ", price=" + price +
                 '}';
     }

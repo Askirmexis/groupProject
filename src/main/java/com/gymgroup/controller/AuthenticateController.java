@@ -20,7 +20,7 @@ public class AuthenticateController {
     @GetMapping("/loginPage")
     public String showLoginForm(){
         
-        return "form-login";
+        return "/form-login";
     }
     
     @GetMapping("/access-denied")
