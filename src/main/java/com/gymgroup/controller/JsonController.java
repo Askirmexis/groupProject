@@ -46,6 +46,11 @@ public class JsonController {
         List<Product> list = service.getAllProducts();
         return ResponseEntity.ok().body(list);
     }
+    @GetMapping("/products")
+    public ResponseEntity<List<Product>> AllProducts2() {
+        List<Product> list = service.getAllProducts();
+        return ResponseEntity.ok().body(list);
+    }
 
     @GetMapping("/treadmills")
     public ResponseEntity<List<Product>> Treadmills() {
@@ -77,7 +82,7 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
 
-    @GetMapping("/weights")
+    @GetMapping("/bars")
     public ResponseEntity<List<Product>> getWeightBars() {
         List<Product> list = service.getWeightBars();
         return ResponseEntity.ok().body(list);
@@ -131,7 +136,7 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
 
-    @GetMapping("/contact")
+    @GetMapping("/messages")
     public ResponseEntity<List<Contact>> getMessages() {
         List<Contact> list = contactService.findAllMessages();
         return ResponseEntity.ok().body(list);
