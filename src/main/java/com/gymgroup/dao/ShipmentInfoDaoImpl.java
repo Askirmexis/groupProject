@@ -23,7 +23,12 @@ public class ShipmentInfoDaoImpl implements ShipmentInfoDao {
 
     @Override
     public void save(ShipmentInfo shipmentinfo) {
-        getSession().save(shipmentinfo);
+        
+        int id=(Integer)getSession().save(shipmentinfo);
+        System.out.println("00000000000000000000shipmentinfo========="+id);
+        Query q = getSession().createNativeQuery("SELECT shipid from shipmentinfo where email = 'asda'");
+        List<Integer> list = q.getResultList();
+        System.out.println("LIST : " + list);
     }
 
     @Override

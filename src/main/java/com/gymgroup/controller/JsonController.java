@@ -133,6 +133,7 @@ public class JsonController {
     }
 
     private ShipmentInfo lastshipment;
+    private Orders lastOrder;
     
     @RequestMapping(value = "/createShipping",
             produces = "application/json",
@@ -141,6 +142,8 @@ public class JsonController {
         System.out.println("JSON OK");
         shipmentService.save(sinfo);
         lastshipment = sinfo;
+        System.out.println("1111111111111sinfo="+sinfo);
+        System.out.println(lastshipment.getShipid());
         return ResponseEntity.ok().body(sinfo);
     }
     
@@ -150,6 +153,9 @@ public class JsonController {
     public ResponseEntity<Orders> create(@RequestBody Orders order) {
         System.out.println("ORDERS OK");
         order.setShipmentInfoByShipmentid(lastshipment);
+        System.out.println(order.getShipmentInfoByShipmentid());
+        oservice.save(order);
+        lastOrder = order;
         return ResponseEntity.ok().body(order);
     }
 }

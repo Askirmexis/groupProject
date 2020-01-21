@@ -297,32 +297,32 @@
                                 dataType: 'json',
                                 timeout: 600000,
                                 success: function (data) {
-                                    console.log("SUCCCESSSS");
+                                    var order = {};
+                                    order["totalprice"] = parseFloat($("#totalAfterShipping").html()).toFixed(2);
+
+                                    console.log(order);
+
+                                    $.ajax({
+                                        type: "POST",
+                                        contentType: "application/json",
+                                        url: "${pageContext.request.contextPath}/json/createOrder",
+                                        data: JSON.stringify(order),
+                                        dataType: 'json',
+                                        timeout: 600000,
+                                        success: function (order) {
+                                            console.log("SUCCCESSSS");
+                                        },
+                                        error: function (e) {
+                                            console.log("ERROR ERRORR");
+                                        }
+                                    });
                                 },
                                 error: function (e) {
                                     console.log("ERROR ERRORR");
                                 }
                             });
 
-                            var order = {};
-                            order["totalprice"] = parseFloat($("#totalAfterShipping").html()).toFixed(2);
-                            
-                            console.log(totalprice);
-                            
-                            $.ajax({
-                                type: "POST",
-                                contentType: "application/json",
-                                url: "${pageContext.request.contextPath}/json/createOrder",
-                                data: JSON.stringify(data),
-                                dataType: 'json',
-                                timeout: 600000,
-                                success: function (data) {
-                                    console.log("SUCCCESSSS");
-                                },
-                                error: function (e) {
-                                    console.log("ERROR ERRORR");
-                                }
-                            });
+
                         });
 
                     });

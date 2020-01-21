@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class ShipmentInfo implements Serializable {
@@ -19,8 +21,9 @@ public class ShipmentInfo implements Serializable {
     private String country;
     private int zip;
     private int telephone;
-
+    
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "shipid", nullable = false)
     public int getShipid() {
         return shipid;
@@ -141,4 +144,11 @@ public class ShipmentInfo implements Serializable {
     public int hashCode() {
         return Objects.hash(shipid, email, fname, lname, company, address, city, country, zip, telephone);
     }
+
+    @Override
+    public String toString() {
+        return "ShipmentInfo{" + "shipid=" + shipid + ", email=" + email + ", fname=" + fname + ", lname=" + lname + ", company=" + company + ", address=" + address + ", city=" + city + ", country=" + country + ", zip=" + zip + ", telephone=" + telephone + '}';
+    }
+    
+    
 }

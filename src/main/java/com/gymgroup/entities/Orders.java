@@ -5,6 +5,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+
 @Entity
 public class Orders implements Serializable{
 
@@ -12,7 +13,7 @@ public class Orders implements Serializable{
     private Timestamp dateTime;
     private float totalPrice;
     private ShipmentInfo shipmentInfoByShipmentid;
-    private Orderdetails orderdetailsByOdid;
+    
 
     @Id
     @Column(name = "oid", nullable = false)
@@ -68,15 +69,10 @@ public class Orders implements Serializable{
         if (!Objects.equals(this.shipmentInfoByShipmentid, other.shipmentInfoByShipmentid)) {
             return false;
         }
-        if (!Objects.equals(this.orderdetailsByOdid, other.orderdetailsByOdid)) {
-            return false;
-        }
+        
         return true;
     }
 
-    
-    
-    
 
     @Override
     public int hashCode() {
@@ -93,13 +89,8 @@ public class Orders implements Serializable{
         this.shipmentInfoByShipmentid = shipmentInfoByShipmentid;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "odid", referencedColumnName = "detailid", nullable = false)
-    public Orderdetails getOrderdetailsByOdid() {
-        return orderdetailsByOdid;
-    }
-
-    public void setOrderdetailsByOdid(Orderdetails orderdetailsByOdid) {
-        this.orderdetailsByOdid = orderdetailsByOdid;
-    }
+   
+  
 }
+
+

@@ -7,6 +7,9 @@ package com.gymgroup.service;
 
 import com.gymgroup.dao.OrdersDao;
 import com.gymgroup.entities.Orders;
+import java.sql.Timestamp;
+import java.util.Date;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +28,9 @@ public class OrdersServiceImpl implements OrdersService{
     
     @Override
     public void save(Orders order) {
+        Date date= new Date();
+        Timestamp ts = new Timestamp(date.getTime());
+        order.setDateTime(ts);
         odao.save(order);
     }
 
