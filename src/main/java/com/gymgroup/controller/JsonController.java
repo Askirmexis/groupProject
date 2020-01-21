@@ -127,13 +127,18 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
 
+    private int lastid;
+    
     @RequestMapping(value = "/createShipping",
             produces = "application/json",
             method = RequestMethod.POST)
     public ResponseEntity<ShipmentInfo> create(@RequestBody ShipmentInfo sinfo) {
         System.out.println("JSON OK");
         shipmentService.save(sinfo);
+        lastid = sinfo.getShipid();
         return ResponseEntity.ok().body(sinfo);
     }
+    
+    
 
 }

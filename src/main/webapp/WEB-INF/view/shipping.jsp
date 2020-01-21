@@ -292,7 +292,7 @@
                             $.ajax({
                                 type: "POST",
                                 contentType: "application/json",
-                                url: "http://localhost:8080/GroupProject/json/createShipping",
+                                url: "${pageContext.request.contextPath}/json/createShipping",
                                 data: JSON.stringify(data),
                                 dataType: 'json',
                                 timeout: 600000,

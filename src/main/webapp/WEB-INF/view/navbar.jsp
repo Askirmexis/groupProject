@@ -124,10 +124,12 @@
                                 Strength
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/rowers">Rowers</a>
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/benches">Benches</a>
+                                
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/weights">Weightbars</a>
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/kettlebells">Kettlebells</a>
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/dumbbells">Dumbbells</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown px-2">
@@ -136,10 +138,10 @@
                                 Functionality
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/multigyms">Multigyms</a>
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/tools">Tools</a>
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/cablestations">Cable Stations</a>
+                                
                             </div>
                         </li>
                     </ul>

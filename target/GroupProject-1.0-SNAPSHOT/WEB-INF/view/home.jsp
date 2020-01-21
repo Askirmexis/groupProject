@@ -86,7 +86,7 @@
             <div class="container carousel-inner no-padding">
                 <div class="carousel-item active">
                     <div class="col-xs-3 col-sm-3 col-md-3">
-                        <a href="${pageContext.request.contextPath}/products/treadmill"><img
+                        <a href="${pageContext.request.contextPath}/products/treadmills"><img
                                 src="https://img.icons8.com/windows/100/000000/treadmill.png"
                                 style="width:100px;height:100px"></a>
                     </div>
@@ -96,12 +96,12 @@
                                 style="width:100px;height:100px"></a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3">
-                        <a href="${pageContext.request.contextPath}/products/bike"><img
+                        <a href="${pageContext.request.contextPath}/products/bikes"><img
                                 src="https://img.icons8.com/ios-filled/100/000000/spinning.png"
                                 style="width:100px;height:100px"></a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3">
-                        <a href="${pageContext.request.contextPath}/products/bench"><img
+                        <a href="${pageContext.request.contextPath}/products/benches"><img
                                 src="https://img.icons8.com/ios-filled/100/000000/bench-press.png"
                                 style="width:100px;height:100px"></a>
                     </div>
@@ -109,22 +109,22 @@
                 </div>
                 <div class="carousel-item">
                     <div class="col-xs-3 col-sm-3 col-md-3">
-                        <a href="${pageContext.request.contextPath}/products/dumbbell"><img
+                        <a href="${pageContext.request.contextPath}/products/dumbbells"><img
                                 src="https://img.icons8.com/material-sharp/100/000000/dumbbell.png"
                                 style="width:100px;height:100px"></a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3">
-                        <a href="${pageContext.request.contextPath}/products/tool"><img
+                        <a href="${pageContext.request.contextPath}/products/tools"><img
                                 src="https://img.icons8.com/ios-glyphs/100/000000/rod-barbells.png"
                                 style="width:100px;height:100px"></a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3">
-                        <a href="${pageContext.request.contextPath}/products/multigym"><img
+                        <a href="${pageContext.request.contextPath}/products/multigyms"><img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUt80EtI8TWLQdXSZqxne5vaN4CqBPZbWJ7Bxfzr5HE8wUovMa&s"
                                 style="width:100px;height:100px"></a>
                     </div>
                     <div class="col-xs-3 col-sm-3 col-md-3">
-                        <a href="${pageContext.request.contextPath}/products/kettlebell"><img
+                        <a href="${pageContext.request.contextPath}/products/kettlebells"><img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXRLFNb9xBWwJVJ7HKN6eYKgj01m-pAWgm0JjRn75Nsx9ko_xrA&s"
                                 style="width:100px;height:100px"></a>
                     </div>

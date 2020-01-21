@@ -43,7 +43,8 @@ public class MyWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         
-        http.authorizeRequests()//Restrict access based on HttpServletRequest
+        http.csrf().disable().
+                authorizeRequests()//Restrict access based on HttpServletRequest
                 //.anyRequest().authenticated()//Any request to the app must be authenticated(logged in)
                 .antMatchers("/static").permitAll()
                 .antMatchers("/").permitAll()
