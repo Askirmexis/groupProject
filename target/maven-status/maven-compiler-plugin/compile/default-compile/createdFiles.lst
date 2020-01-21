@@ -9,7 +9,9 @@ com\gymgroup\controller\AdminController.class
 com\gymgroup\service\TagsService.class
 com\gymgroup\controller\ChatController.class
 com\gymgroup\service\RoleService.class
+com\gymgroup\dao\OrdersDaoImpl.class
 com\gymgroup\dao\BrandDao.class
+com\gymgroup\dao\OrdersDao.class
 com\gymgroup\service\BrandService.class
 com\gymgroup\dao\ShipmentInfoDaoImpl.class
 com\gymgroup\entities\Links.class
@@ -17,6 +19,7 @@ com\gymgroup\dao\CategoriesDao.class
 com\gymgroup\controller\OrderController.class
 com\gymgroup\config\PaypalConfig.class
 com\gymgroup\controller\ProductController.class
+com\gymgroup\service\OrdersService.class
 com\gymgroup\service\ShipmentInfoService.class
 com\gymgroup\service\UserService.class
 com\gymgroup\entities\Contact.class
@@ -42,6 +45,7 @@ com\gymgroup\dao\RoleDaoImpl.class
 com\gymgroup\entities\ChatInput.class
 com\gymgroup\entities\Tags.class
 com\gymgroup\entities\Role.class
+com\gymgroup\service\OrdersServiceImpl.class
 com\gymgroup\entities\Sizes.class
 com\gymgroup\dao\BrandDaoImpl.class
 com\gymgroup\dao\ShipmentInfoDao.class

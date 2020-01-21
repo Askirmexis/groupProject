@@ -5,10 +5,15 @@
  */
 package com.gymgroup.service;
 
+import com.gymgroup.entities.Orders;
+import java.util.List;
+
 /**
  *
  * @author Alex
  */
 public interface OrdersService {
-    
+    void save(Orders order);
+
+    List<Orders> findAll();
 }

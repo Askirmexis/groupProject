@@ -10,6 +10,7 @@ public class Orders implements Serializable{
 
     private int oid;
     private Timestamp dateTime;
+    private float totalPrice;
     private ShipmentInfo shipmentInfoByShipmentid;
     private Orderdetails orderdetailsByOdid;
 
@@ -21,6 +22,16 @@ public class Orders implements Serializable{
 
     public void setOid(int oid) {
         this.oid = oid;
+    }
+    
+    @Basic
+    @Column(name = "totalprice", nullable = false)
+    public float getTotalPrice(){
+        return totalPrice;
+    }
+    
+    public void setTotalPrice(float totalPrice){
+        this.totalPrice = totalPrice;
     }
 
     @Basic
@@ -34,17 +45,38 @@ public class Orders implements Serializable{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (obj == null) {
             return false;
         }
-        Orders orders = (Orders) o;
-        return oid == orders.oid
-                && Objects.equals(dateTime, orders.dateTime);
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Orders other = (Orders) obj;
+        if (this.oid != other.oid) {
+            return false;
+        }
+        if (this.totalPrice != other.totalPrice) {
+            return false;
+        }
+        if (!Objects.equals(this.dateTime, other.dateTime)) {
+            return false;
+        }
+        if (!Objects.equals(this.shipmentInfoByShipmentid, other.shipmentInfoByShipmentid)) {
+            return false;
+        }
+        if (!Objects.equals(this.orderdetailsByOdid, other.orderdetailsByOdid)) {
+            return false;
+        }
+        return true;
     }
+
+    
+    
+    
 
     @Override
     public int hashCode() {

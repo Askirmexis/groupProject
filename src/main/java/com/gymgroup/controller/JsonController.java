@@ -1,11 +1,13 @@
 package com.gymgroup.controller;
 
 import com.gymgroup.entities.Contact;
+import com.gymgroup.entities.Orders;
 import com.gymgroup.entities.Product;
 import com.gymgroup.entities.ShipmentInfo;
 
 import com.gymgroup.service.ContactService;
 import com.gymgroup.service.OrderService;
+import com.gymgroup.service.OrdersService;
 import com.gymgroup.service.ProductService;
 import com.gymgroup.service.ShipmentInfoService;
 
@@ -30,6 +32,9 @@ public class JsonController {
 
     @Autowired
     ShipmentInfoService shipmentService;
+    
+    @Autowired
+    OrdersService oservice;
 
     @GetMapping
     public ResponseEntity<List<Product>> AllProducts() {
@@ -127,7 +132,7 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
 
-    private int lastid;
+    private ShipmentInfo lastshipment;
     
     @RequestMapping(value = "/createShipping",
             produces = "application/json",
@@ -135,10 +140,16 @@ public class JsonController {
     public ResponseEntity<ShipmentInfo> create(@RequestBody ShipmentInfo sinfo) {
         System.out.println("JSON OK");
         shipmentService.save(sinfo);
-        lastid = sinfo.getShipid();
+        lastshipment = sinfo;
         return ResponseEntity.ok().body(sinfo);
     }
     
-    
-
+    @RequestMapping(value = "/createOrder",
+            produces = "application/json",
+            method = RequestMethod.POST)
+    public ResponseEntity<Orders> create(@RequestBody Orders order) {
+        System.out.println("ORDERS OK");
+        order.setShipmentInfoByShipmentid(lastshipment);
+        return ResponseEntity.ok().body(order);
+    }
 }

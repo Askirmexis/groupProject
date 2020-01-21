@@ -5,10 +5,16 @@
  */
 package com.gymgroup.dao;
 
+import com.gymgroup.entities.Orders;
+import java.util.List;
+
 /**
  *
  * @author Alex
  */
 public interface OrdersDao {
     
+    void save(Orders order);
+
+    List<Orders> findAll();
 }

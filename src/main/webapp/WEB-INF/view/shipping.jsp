@@ -304,7 +304,25 @@
                                 }
                             });
 
-
+                            var order = {};
+                            order["totalprice"] = parseFloat($("#totalAfterShipping").html()).toFixed(2);
+                            
+                            console.log(totalprice);
+                            
+                            $.ajax({
+                                type: "POST",
+                                contentType: "application/json",
+                                url: "${pageContext.request.contextPath}/json/createOrder",
+                                data: JSON.stringify(data),
+                                dataType: 'json',
+                                timeout: 600000,
+                                success: function (data) {
+                                    console.log("SUCCCESSSS");
+                                },
+                                error: function (e) {
+                                    console.log("ERROR ERRORR");
+                                }
+                            });
                         });
 
                     });

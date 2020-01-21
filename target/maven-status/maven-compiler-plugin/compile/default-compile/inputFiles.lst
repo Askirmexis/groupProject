@@ -11,14 +11,17 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\confi
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\SecurityController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\ChatController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\UserDao.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\OrdersDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\JsonController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Contact.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\OrdersDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Tags.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ProductDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\config\DatabaseConfig.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Categories.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\UserService.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Orders.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\OrdersService.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ProductDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\ContactController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\PaypalService.java
@@ -50,6 +53,7 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entit
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Sizes.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Role.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ShipmentInfoDaoImpl.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\OrdersServiceImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ContactDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\RoleDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\UserServiceImpl.java
