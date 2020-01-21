@@ -1,11 +1,13 @@
 package com.gymgroup.controller;
 
 import com.gymgroup.entities.Contact;
+import com.gymgroup.entities.Orderdetails;
 import com.gymgroup.entities.Orders;
 import com.gymgroup.entities.Product;
 import com.gymgroup.entities.ShipmentInfo;
 
 import com.gymgroup.service.ContactService;
+import com.gymgroup.service.OrderDetailsService;
 import com.gymgroup.service.OrderService;
 import com.gymgroup.service.OrdersService;
 import com.gymgroup.service.ProductService;
@@ -35,6 +37,9 @@ public class JsonController {
     
     @Autowired
     OrdersService oservice;
+    
+    @Autowired
+    OrderDetailsService odservice;
 
     @GetMapping
     public ResponseEntity<List<Product>> AllProducts() {
@@ -151,11 +156,34 @@ public class JsonController {
             produces = "application/json",
             method = RequestMethod.POST)
     public ResponseEntity<Orders> create(@RequestBody Orders order) {
+        
         System.out.println("ORDERS OK");
+        
+        
         order.setShipmentInfoByShipmentid(lastshipment);
-        System.out.println(order.getShipmentInfoByShipmentid());
+        System.out.println(order.getTotalPrice());
+        
+        
         oservice.save(order);
         lastOrder = order;
         return ResponseEntity.ok().body(order);
+    }
+    
+    @RequestMapping(value = "/createDetails",
+            produces = "application/json",
+            method = RequestMethod.POST)
+    public ResponseEntity<Orderdetails> create(@RequestBody Orderdetails orderDetails) {
+        
+        System.out.println("ORDERDETAILS OK");
+        System.out.println("LAST ORDER:-------------" + lastOrder);
+        System.out.println("THISDETAILS: -------------" + orderDetails);
+        
+        orderDetails.setOrderId(lastOrder);
+        
+        System.out.println("THIS DETAILS AFTER ORDERINPUT !! ---"  + orderDetails);
+        
+        odservice.save(orderDetails);
+        
+        return ResponseEntity.ok().body(orderDetails);
     }
 }

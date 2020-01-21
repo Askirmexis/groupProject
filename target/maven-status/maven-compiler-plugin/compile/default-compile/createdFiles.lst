@@ -9,6 +9,7 @@ com\gymgroup\controller\AdminController.class
 com\gymgroup\service\TagsService.class
 com\gymgroup\controller\ChatController.class
 com\gymgroup\service\RoleService.class
+com\gymgroup\dao\OrderDetailsDaoImpl.class
 com\gymgroup\dao\OrdersDaoImpl.class
 com\gymgroup\dao\BrandDao.class
 com\gymgroup\dao\OrdersDao.class
@@ -57,6 +58,7 @@ com\gymgroup\controller\ContactController.class
 com\gymgroup\dao\TagsDao.class
 com\gymgroup\dao\ProductDao.class
 com\gymgroup\entities\ProductEditor.class
+com\gymgroup\dao\OrderDetailsDao.class
 com\gymgroup\dao\ContactDao.class
 com\gymgroup\entities\ChatOutput.class
 com\gymgroup\config\MyWebSecurityConfigurer.class
@@ -64,6 +66,8 @@ com\gymgroup\entities\Orderdetails.class
 com\gymgroup\dao\CategoriesDaoImpl.class
 com\gymgroup\config\MyWebAppInitializer.class
 com\gymgroup\entities\User.class
+com\gymgroup\service\OrderDetailsService.class
+com\gymgroup\service\OrderDetailsServiceImpl.class
 com\gymgroup\controller\RegistrationController.class
 com\gymgroup\controller\AuthenticateController.class
 com\gymgroup\entities\Categories.class

@@ -11,7 +11,7 @@ public class Orders implements Serializable{
 
     private int oid;
     private Timestamp dateTime;
-    private float totalPrice;
+    private double totalprice;
     private ShipmentInfo shipmentInfoByShipmentid;
     
 
@@ -28,12 +28,12 @@ public class Orders implements Serializable{
     
     @Basic
     @Column(name = "totalprice", nullable = false)
-    public float getTotalPrice(){
-        return totalPrice;
+    public double getTotalPrice(){
+        return totalprice;
     }
     
-    public void setTotalPrice(float totalPrice){
-        this.totalPrice = totalPrice;
+    public void setTotalPrice(double totalprice){
+        this.totalprice = totalprice;
     }
 
     @Basic
@@ -61,7 +61,7 @@ public class Orders implements Serializable{
         if (this.oid != other.oid) {
             return false;
         }
-        if (this.totalPrice != other.totalPrice) {
+        if (this.totalprice != other.totalprice) {
             return false;
         }
         if (!Objects.equals(this.dateTime, other.dateTime)) {
@@ -88,6 +88,11 @@ public class Orders implements Serializable{
 
     public void setShipmentInfoByShipmentid(ShipmentInfo shipmentInfoByShipmentid) {
         this.shipmentInfoByShipmentid = shipmentInfoByShipmentid;
+    }
+
+    @Override
+    public String toString() {
+        return "Orders{" + "oid=" + oid + ", dateTime=" + dateTime + ", totalprice=" + totalprice + ", shipmentInfoByShipmentid=" + shipmentInfoByShipmentid + '}';
     }
 
    

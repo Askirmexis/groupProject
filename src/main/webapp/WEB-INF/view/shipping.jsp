@@ -298,7 +298,7 @@
                                 timeout: 600000,
                                 success: function (data) {
                                     var order = {};
-                                    order["totalprice"] = parseFloat($("#totalAfterShipping").html()).toFixed(2);
+                                    order["totalPrice"] = parseFloat($("#totalAfterShipping").html()).toFixed(2);
 
                                     console.log(order);
 
@@ -310,12 +310,35 @@
                                         dataType: 'json',
                                         timeout: 600000,
                                         success: function (order) {
-                                            console.log("SUCCCESSSS");
+                                            
+                                            var details = {};
+                                            
+                                            cart.forEach(item => {
+                                            details["productid"] = parseInt(item.productId);
+                                            details["quantity"] = parseInt(item.qty);
+                                            console.log(details);
+                                            $.ajax({
+                                                type: "POST",
+                                                contentType: "application/json",
+                                                url: "${pageContext.request.contextPath}/json/createDetails",
+                                                data: JSON.stringify(details),
+                                                dataType: 'json',
+                                                timeout: 600000,
+                                                success: function (details) {
+                                                    console.log("SUCCCESS LAST")
+                                                },
+                                                error: function (e) {
+                                                console.log("ERROR ERRORR");
+                                                }  
+                                            });    
+                                            });
                                         },
                                         error: function (e) {
                                             console.log("ERROR ERRORR");
                                         }
                                     });
+                                    
+                                    
                                 },
                                 error: function (e) {
                                     console.log("ERROR ERRORR");

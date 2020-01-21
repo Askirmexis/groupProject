@@ -2,6 +2,7 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\servi
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ShipmentInfoDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\BrandServiceImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Orderdetails.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\OrderDetailsServiceImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\ShipmentInfoService.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\config\StringToRoleConverter.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\RoleService.java
@@ -10,12 +11,14 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\servi
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\config\MyWebSecurityConfigurer.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\SecurityController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\ChatController.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\OrderDetailsService.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\UserDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\OrdersDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\JsonController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Contact.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\OrdersDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Tags.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\OrderDetailsDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ProductDao.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\config\DatabaseConfig.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Categories.java
@@ -34,6 +37,7 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\confi
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\ContactService.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\TagsDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\RegistrationController.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\OrderDetailsDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Gender.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\TagsServiceImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\PaypalController.java

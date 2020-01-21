@@ -8,12 +8,24 @@ import javax.persistence.Id;
 import java.util.Objects;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Orderdetails implements Serializable{
+
     private int detailid;
     private int productid;
     private int quantity;
+    private Orders orderId;
+//    public Orderdetails(int productid, int quantity, Orders orderId) {
+//        this.productid = productid;
+//        this.quantity = quantity;
+//        this.orderId = orderId;
+//    }
+
+    public Orderdetails() {
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,19 +36,6 @@ public class Orderdetails implements Serializable{
 
     public void setDetailid(int detailid) {
         this.detailid = detailid;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Orderdetails that = (Orderdetails) o;
-        return detailid == that.detailid;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(detailid);
     }
 
     @Basic
@@ -58,4 +57,41 @@ public class Orderdetails implements Serializable{
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Orderdetails that = (Orderdetails) o;
+        return detailid == that.detailid
+                && orderId == that.orderId
+                && productid == that.productid
+                && quantity == that.quantity;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(detailid, orderId, productid, quantity);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "orderId", referencedColumnName = "oid", nullable = false)
+    public Orders getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Orders orderId) {
+        this.orderId = orderId;
+    }
+
+    @Override
+    public String toString() {
+        return "Orderdetails{" + "detailid=" + detailid + ", productid=" + productid + ", quantity=" + quantity + ", orderId=" + orderId + '}';
+    }
+    
+    
 }
