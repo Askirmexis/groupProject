@@ -325,7 +325,9 @@
                                                 dataType: 'json',
                                                 timeout: 600000,
                                                 success: function (details) {
-                                                    console.log("SUCCCESS LAST")
+                                                    alert("You will now be redirected.");
+                                                    window.location = "${pageContext.request.contextPath}/payment/authorize";
+                                                    console.log("SUCCCESS LAST");
                                                 },
                                                 error: function (e) {
                                                 console.log("ERROR ERRORR");

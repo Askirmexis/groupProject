@@ -21,6 +21,7 @@ com\gymgroup\controller\OrderController.class
 com\gymgroup\config\PaypalConfig.class
 com\gymgroup\controller\ProductController.class
 com\gymgroup\service\OrdersService.class
+com\gymgroup\model\OrderDetail.class
 com\gymgroup\service\ShipmentInfoService.class
 com\gymgroup\service\UserService.class
 com\gymgroup\entities\Contact.class
@@ -37,7 +38,6 @@ com\gymgroup\entities\Status.class
 com\gymgroup\controller\HomeController.class
 com\gymgroup\controller\JsonController.class
 com\gymgroup\entities\Orders.class
-com\gymgroup\service\OrderDetail.class
 com\gymgroup\config\DispatcherServletInitializer.class
 com\gymgroup\service\ShipmentInfoServiceImpl.class
 com\gymgroup\entities\Cart.class
@@ -55,6 +55,7 @@ com\gymgroup\dao\TagsDaoImpl.class
 com\gymgroup\service\BrandServiceImpl.class
 com\gymgroup\config\MyWebAppConfig.class
 com\gymgroup\controller\ContactController.class
+com\gymgroup\controller\PaypalController.class
 com\gymgroup\dao\TagsDao.class
 com\gymgroup\dao\ProductDao.class
 com\gymgroup\entities\ProductEditor.class

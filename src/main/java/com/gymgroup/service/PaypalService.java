@@ -1,5 +1,6 @@
 package com.gymgroup.service;
 
+import com.gymgroup.model.OrderDetail;
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
@@ -34,22 +35,22 @@ public class PaypalService {
     private Payer getPayerInformation() {
         Payer payer = new Payer();
         payer.setPaymentMethod("paypal");
-        PayerInfo payerInfo = new PayerInfo();
-        payerInfo.setFirstName("Tas")
-                .setLastName("Lel")
-                .setEmail("sb-g37zv883630@personal.example.com");
+//        PayerInfo payerInfo = new PayerInfo();
+//        payerInfo.setFirstName("Tas")
+//                .setLastName("Lel")
+//                .setEmail("sb-g37zv883630@personal.example.com");
         /*
         password for paypal account= n+G;deE4
          */
 
-        payer.setPayerInfo(payerInfo);
+        //payer.setPayerInfo(payerInfo);
         return payer;
     }
 
     private RedirectUrls getRedirectUrls() {
         RedirectUrls redirectUrls = new RedirectUrls();
-        redirectUrls.setCancelUrl("http://localhost:8080/SpringMvcChatApp/cancel");
-        redirectUrls.setReturnUrl("http://localhost:8080/SpringMvcChatApp/review_payment");
+        redirectUrls.setCancelUrl("http://localhost:8080/GroupProject/payment/cancel");
+        redirectUrls.setReturnUrl("http://localhost:8080/GroupProject/payment/review_payment");
         return redirectUrls;
     }
 

@@ -7,7 +7,6 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\servi
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\config\StringToRoleConverter.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\RoleService.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\ContactServiceImpl.java
-C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\OrderDetail.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\config\MyWebSecurityConfigurer.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\SecurityController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\ChatController.java
@@ -67,6 +66,7 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\B
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Status.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\OrderService.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\TagsDao.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\model\OrderDetail.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Links.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\User.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\RoleServiceImpl.java

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 /* PropertySource annotation defines the external properties file location, in this case the properties file located in classpath. 
  * Then PropertySourcesPlaceholderConfigurer class will read and parse the properties in key value pair saved in this file.
  *  */
-@PropertySource("classpath:database.properties")
+@PropertySource("classpath:application.properties")
 @Configuration
 public class PaypalConfig {
 

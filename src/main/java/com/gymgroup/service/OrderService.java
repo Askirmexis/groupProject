@@ -2,6 +2,7 @@ package com.gymgroup.service;
 
 
 import com.gymgroup.entities.Product;
+import com.gymgroup.model.OrderDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

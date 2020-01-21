@@ -3,7 +3,8 @@ package com.gymgroup.controller;
 
 import com.gymgroup.entities.Product;
 import com.gymgroup.entities.ProductEditor;
-import com.gymgroup.service.OrderDetail;
+import com.gymgroup.model.OrderDetail;
+
 import com.gymgroup.service.OrderService;
 import com.gymgroup.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
