@@ -140,14 +140,14 @@
             </a>
         </div>
         <br>
-    <br>
-    <div class="wrapper text-center">
-        <button class="btn btn-info">View all products ></button>
-    </div>
-    <br>
+        <br>
+        <div class="wrapper text-center">
+            <button class="btn btn-info" id="btnall">View all products ></button>
+        </div>
+        <br>
         <div class="col-12 text-center" style="background-color: rgb(233, 231, 229);"><br>
             <p style="font-size: 140%;">Need advice choosing the perfect fitness equipment?</p>
-            <h5 style="font-size: 140%;"><u><a href="" style="color:black">Contact us</a></u></h5>
+            <h5 style="font-size: 140%;"><u><a href="${pageContext.request.contextPath}/contact" style="color:black">Contact us</a></u></h5>
             <br>
         </div>
         <br>
@@ -157,23 +157,23 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 py-2"><a><img src="https://www.technogym.com/wpress/wp-content/uploads/2018/10/18dda1acd4c24347a786d063b4739cb6.jpg"
                                                             class="img-fluid" alt="Responsive image" style="max-width:400px"></a>
-                    <br><a href=""><h4 style="color: black;">MYRUN</h4></a></div><br>
+                    <br><a href="${pageContext.request.contextPath}/products/treadmills"><h4 style="color: black;">MYRUN</h4></a></div><br>
                 <div class="col-lg-4 col-md-6 py-2"><a><img src="https://www.technogym.com/wpress/wp-content/uploads/2018/10/bb7ddaa91201462591dc5c6afbbc92de.jpg"
                                                             class="img-fluid" alt="Responsive image" style="max-width:400px"></a>
-                    <br><a href=""><h4 style="color: black;">RUN PERSONAL</h4></a></div><br>
+                    <br><a href="${pageContext.request.contextPath}/products/treadmills"><h4 style="color: black;">RUN PERSONAL</h4></a></div><br>
                 <div class="col-lg-4 col-md-6 py-2"><a><img src="https://www.technogym.com/wpress/wp-content/uploads/2018/10/4b203e12892b4fc38848b5a79454c0ca.jpg"
                                                             class="img-fluid" alt="Responsive image" style="max-width:400px"></a>
-                    <br><a href=""><h4 style="color: black;">RECLINE PERSONAL</h4></a></div><br>
+                    <br><a href="${pageContext.request.contextPath}/products/bikes"><h4 style="color: black;">RECLINE PERSONAL</h4></a></div><br>
 
-                <div class="col-lg-4 col-md-6 py-2"><a><img src="https://www.technogym.com/wpress/wp-content/uploads/2018/10/19cc24e00eb84cddb1a3992e174dc411.jpg"
+                <div class="col-lg-4 col-md-6 py-2"><a hre><img src="https://www.technogym.com/wpress/wp-content/uploads/2018/10/19cc24e00eb84cddb1a3992e174dc411.jpg"
                                                             class="img-fluid" alt="Responsive image" style="max-width:400px"></a>
-                    <br><a href=""><h4 style="color: black;">CROSS PERSONAL</h4></a></div>
+                    <br><a href="${pageContext.request.contextPath}/products/elliptical"><h4 style="color: black;">CROSS PERSONAL</h4></a></div>
                 <div class="col-lg-4 col-md-6 py-2"><a><img src="https://www.technogym.com/wpress/wp-content/uploads/2018/10/631e94aebef04844a81ca73f693ae000.jpg"
                                                             class="img-fluid" alt="Responsive image" style="max-width:400px"></a>
-                    <br><a href=""><h4 style="color: black;">SKILLROW</h4></a></div>
+                    <br><a href="${pageContext.request.contextPath}/products/rowers"><h4 style="color: black;">SKILLROW</h4></a></div>
                 <div class="col-lg-4 col-md-6 py-2"><a><img src="https://www.technogym.com/wpress/wp-content/uploads/2018/10/a6f244acbc4b4f599902504100e366de.jpg"
                                                             class="img-fluid" alt="Responsive image" style="max-width:400px"></a>
-                    <br><a href=""><h4 style="color: black;">MYCYCLING</h4></a></div>
+                    <br><a href="${pageContext.request.contextPath}/products/bikes"><h4 style="color: black;">MYCYCLING</h4></a></div>
             </div>
         </div>
 
@@ -258,5 +258,10 @@
         <br>
 
         <%@include file="footer.jsp" %>
+        <script>
+   $("#btnall").on("click", function (ev) {
+                location.href = "${pageContext.request.contextPath}/products";
+            });
+        </script>
     </body>
 </html>

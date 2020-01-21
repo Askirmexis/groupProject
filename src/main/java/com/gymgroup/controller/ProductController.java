@@ -33,13 +33,13 @@ public class ProductController {
 
     @GetMapping
     public String viewProduct() {
-        return "treadmills";
+        return "template";
     }
 
     @GetMapping("/{tag}")
     public String viewElliptical(@PathVariable("tag") String title, Model model) {
         model.addAttribute("tagTitle", title);
-        return "treadmills";
+        return "template";
     }
 
     @GetMapping("/product/{id}")
@@ -53,21 +53,7 @@ public class ProductController {
 //    public String testMapping(@PathVariable("title") String title) {
 //        return "test";
 //    }
-    @GetMapping("/cardio")
-    public String getCardio() {
-        return "cardio";
-    }
-//
-
-    @GetMapping("/strength")
-    public String getStrength() {
-        return "strength";
-    }
-
-    @GetMapping("/functionality")
-    public String getFunctionality() {
-        return "functionality";
-    }
+   
 
     @GetMapping("/product-form")
     public String showForm(Model m) {

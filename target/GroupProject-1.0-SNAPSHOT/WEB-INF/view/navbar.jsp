@@ -126,8 +126,8 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/rowers">Rowers</a>
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/benches">Benches</a>
-                                
-                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/weights">Weightbars</a>
+
+
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/kettlebells">Kettlebells</a>
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/dumbbells">Dumbbells</a>
                             </div>
@@ -141,7 +141,7 @@
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/multigyms">Multigyms</a>
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/tools">Tools</a>
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/cablestations">Cable Stations</a>
-                                
+
                             </div>
                         </li>
                     </ul>
@@ -156,7 +156,7 @@
                                     <a class="dropdown-item" href="${pageContext.request.contextPath}/loginPage">Login</a>
                                 </security:authorize>
                                 <security:authorize access="hasRole('ADMIN')">
-                                    <a class="dropdown-item" href="#">Messages</a>
+                                    <a class="dropdown-item" href="${pageContext.request.contextPath}/admin/contactMessages">Messages</a>
                                     <a class="dropdown-item" href="#">Register Product</a>
                                 </security:authorize>
 
@@ -168,7 +168,7 @@
                                 </security:authorize>
                             </div>
                         </li>
-                        <a class="text-left" href="#" style="padding-top:10px;color: white;">Contact</a>
+                        <a class="text-left" href="${pageContext.request.contextPath}/contact" style="padding-top:10px;color: white;">Contact</a>
                         <li class="nav-item dropdown px-2">
                             <a href="#" id="cart" class="nav-link dropdown-toggle text-white"><i
                                     class="fa fa-shopping-cart"></i> Cart: <span id="itemsAmount2"
@@ -199,7 +199,10 @@
             $("#cartCheckout").on("click", function (ev) {
                 location.href = "${pageContext.request.contextPath}/checkout";
             });
-
+            //get the cart items from localStorage
+            CART.init();
+            //load the cart items
+            showCart();
         </script>
     </body>
 </html>
