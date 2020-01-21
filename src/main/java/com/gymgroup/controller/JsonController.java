@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.List;
 
 @RestController
@@ -128,10 +127,13 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
 
-    @PostMapping("/createShipping")
-    public ResponseEntity<String> create(@RequestBody ShipmentInfo sinfo) {
+    @RequestMapping(value = "/createShipping",
+            produces = "application/json",
+            method = RequestMethod.POST)
+    public ResponseEntity<ShipmentInfo> create(@RequestBody ShipmentInfo sinfo) {
+        System.out.println("JSON OK");
         shipmentService.save(sinfo);
-        return null;
+        return ResponseEntity.ok().body(sinfo);
     }
 
 }
