@@ -18,6 +18,10 @@ public class Product implements Serializable {
     private Tags tagsByTagsId;
     private Links linksByProductId;
     private String Thumbnail;
+    private String pic2;
+    private String pic3;
+    
+    
 
     public Product(String name, int price) {
         this.name=name;
@@ -86,6 +90,26 @@ public class Product implements Serializable {
     public void setThumbnail(String thumbnail) {
         Thumbnail = thumbnail;
     }
+    @Basic
+    @Column(name = "pic2", nullable = true)
+    public String getPic2() {
+        return pic2;
+    }
+
+    public void setPic2(String pic2) {
+        this.pic2 = pic2;
+    }
+    @Basic
+    @Column(name = "pic3", nullable = true)
+    public String getPic3() {
+        return pic3;
+    }
+
+    public void setPic3(String pic3) {
+        this.pic3 = pic3;
+    }
+    
+    
 
     @Override
     public boolean equals(Object o) {

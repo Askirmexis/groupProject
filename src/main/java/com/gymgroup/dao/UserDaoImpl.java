@@ -19,10 +19,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Alex
  */
+@Transactional(rollbackFor = Exception.class)
 @Repository
 public class UserDaoImpl implements UserDao {
 

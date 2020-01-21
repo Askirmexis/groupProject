@@ -18,6 +18,15 @@ async function displayProducts() {
     data.forEach(createProductArticles);
 }
 
+async function loadProducts() {
+    const response = await fetch(`${URL}/products`);
+    const data = await response.json();
+    CART.init();
+    showCart();
+    data.forEach(item =>{
+        products.push(item);
+    });
+}
 
 function createProductArticles(product) {
 
@@ -30,7 +39,7 @@ function createProductArticles(product) {
                                             <div class="message-body">
                                                 <div class="message-body-heading">
                                                     <h5>` + product.contactName + `<span class="unread">Unread</span></h5>
-                                                    <span>7 hours ago</span>
+                                                    <span></span>
                                                 </div>
                                                 <p>` + product.contactMessage + `</p>
                                             </div>

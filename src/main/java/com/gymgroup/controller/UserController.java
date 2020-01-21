@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
     
     
-    @GetMapping("/update/{id}")
+    @GetMapping("/update")
     public String editUser(){
         return "editprofile";
     }

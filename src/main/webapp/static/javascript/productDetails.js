@@ -25,10 +25,10 @@ function createProductArticle(product) {
                             <img class="d-block w-100" src="`+product.thumbnail+`" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="`+product.thumbnail+`" alt="Second slide">
+                            <img class="d-block w-100" `+"SameSite=None"+" Secure"+` src="`+product.pic2+`" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="`+product.thumbnail+`">
+                            <img class="d-block w-100" `+"SameSite=None"+" Secure"+` src="`+product.pic3+`">
                         </div>
                     </div>
                     <!--/.Slides-->
@@ -46,9 +46,9 @@ function createProductArticle(product) {
                         <li data-target="#carousel-thumb" data-slide-to="0" class="active"> <img class="d-block w-100"
                                 src="`+product.thumbnail+`" class="img-fluid"></li>
                         <li data-target="#carousel-thumb" data-slide-to="1"><img class="d-block w-100"
-                                src="`+product.thumbnail+`" class="img-fluid"></li>
+                                src="`+product.pic2+`" `+"SameSite=None"+" Secure"+` class="img-fluid"></li>
                         <li data-target="#carousel-thumb" data-slide-to="2"><img class="d-block w-100"
-                                src="`+product.thumbnail+`" class="img-fluid"></li>
+                                src="`+product.pic3+`"  `+"SameSite=None"+" Secure"+` class="img-fluid"></li>
                     </ol>
                 </div>
                 <!--/.Carousel Wrapper-->
@@ -95,5 +95,3 @@ function createProductArticle(product) {
     }
     
 }
-
-

@@ -15,9 +15,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
               integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
                 integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -50,6 +48,7 @@
 
             .navbar-toggler {
                 background-color: rgb(228, 228, 228);
+                
             }
 
             .navbar-expand-lg {
@@ -88,14 +87,13 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light d-flex" style="height: 100px;">
-                <a class="navbar-brand text-white" href="#" style="">
-                    <!-- <img src="https://res.cloudinary.com/teepublic/image/private/s--KJGk5oZu--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_000000,e_outline:48/co_000000,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1488364065/production/designs/1278818_1.jpg" alt="" style="max-width:83px;"> -->
-                    <img src="https://i.ebayimg.com/images/g/OvYAAOSw0NVbqt8H/s-l300.jpg" alt="..."
+                <a class="navbar-brand" href="${pageContext.request.contextPath}">
+                   <img src="https://i.ebayimg.com/images/g/OvYAAOSw0NVbqt8H/s-l300.jpg" alt="..."
                          class="img-thumbnail px-0 py-0" style="max-width:88px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon text-white"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -139,8 +137,8 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="${pageContext.request.contextPath}/products/multigyms">Multigyms</a>
-                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/tools">Tools</a>
-                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/cablestations">Cable Stations</a>
+                                
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/products/multigyms">Cable Stations</a>
 
                             </div>
                         </li>

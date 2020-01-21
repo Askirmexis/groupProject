@@ -74,7 +74,7 @@
         <%@include file="footer.jsp"%>
         <script>
             displayOneProduct();
-            
+            loadProducts();
             
              function addToCart(id) {
                  console.log(id);
