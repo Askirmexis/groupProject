@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Orderdetails implements Serializable{
@@ -14,6 +16,7 @@ public class Orderdetails implements Serializable{
     private int quantity;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "detailid", nullable = false)
     public int getDetailid() {
         return detailid;

@@ -16,6 +16,7 @@ public class Orders implements Serializable{
     
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "oid", nullable = false)
     public int getOid() {
         return oid;
