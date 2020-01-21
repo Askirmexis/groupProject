@@ -44,11 +44,11 @@
                                 You must agree before submitting.
                             </div>
                             <br>
-                            <button id="checkoutC" onclick="window.location.href = '${pageContext.request.contextPath}/shipping';" class="btn btn-success text-center my-2" style="min-width:15%">Checkout</button>
+                            <button id="checkoutC" onclick="window.location.href = '${pageContext.request.contextPath}/shipping';" class="btn btn-success text-center my-2" style="min-width:15%">Continue</button>
                         </form>
 
                         <button class="btn text-center border my-2" style="min-width: 15%;"
-                                onclick="window.location.href = 'https://w3docs.com';">Continue Shopping</button>
+                                onclick="window.location.href = '${pageContext.request.contextPath}/products';">Continue Shopping</button>
                     </div>
 
                 </div>

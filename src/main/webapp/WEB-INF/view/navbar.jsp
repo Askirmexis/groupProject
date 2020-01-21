@@ -161,7 +161,7 @@
                                 </security:authorize>
 
                                 <security:authorize access="isAuthenticated()">
-                                    <a class="dropdown-item" href="#">Edit profile</a>
+                                    <a class="dropdown-item" href="${pageContext.request.contextPath}/user/update">Edit profile</a>
                                     <form:form action="${pageContext.request.contextPath}/logout" method="POST">
                                         <input class="text-center" style="background-color:white;border:none;padding-left:26px" type="submit" value="Logout">
                                     </form:form>

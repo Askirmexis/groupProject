@@ -49,7 +49,8 @@ public class MyWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .antMatchers("/static").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/products/**", "/json/**","/user/**","/order/**").permitAll()
+                .antMatchers("/user/**").hasAnyRole("USER","ADMIN")
+                .antMatchers("/products/**", "/json/**","/order/**").permitAll()
                 .and()
                 .formLogin() //We are customizing the form login process
                 .loginPage("/loginPage")  // Show my form at the request mapping

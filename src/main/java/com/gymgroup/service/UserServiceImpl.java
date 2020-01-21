@@ -66,5 +66,10 @@ public class UserServiceImpl implements UserService{
         }
         return authorities;
     }
+
+    @Override
+    public void updateUser(int id, User u) {
+        udao.update(id,u);
+    }
     
 }

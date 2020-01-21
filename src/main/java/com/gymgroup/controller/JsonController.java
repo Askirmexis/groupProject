@@ -5,6 +5,7 @@ import com.gymgroup.entities.Orderdetails;
 import com.gymgroup.entities.Orders;
 import com.gymgroup.entities.Product;
 import com.gymgroup.entities.ShipmentInfo;
+import com.gymgroup.model.OrderDetail;
 
 import com.gymgroup.service.ContactService;
 
@@ -152,13 +153,12 @@ public class JsonController {
         return ResponseEntity.ok().body(list);
     }
     
-    @Autowired
-    PaypalService pservice;
+    
     
     private ShipmentInfo lastshipment;
     private Orders lastOrder;
     
-    private Model model;
+    
     
     @RequestMapping(value = "/createShipping",
             produces = "application/json",
@@ -211,81 +211,8 @@ public class JsonController {
     
     
     
-//    @PostMapping("/payment/authorize")
-//    public String authorizePayment(){
-//        System.out.println("OrderDetail="+paypal);
-//        try {
-//            String approvalLink = pservice.authorizePayment(paypal);
-//            System.out.println("approvalLink==="+approvalLink);
-//            return "redirect:"+approvalLink;
-//            
-//        } catch (PayPalRESTException ex) {
-//            Logger.getLogger(PaypalController.class.getName()).log(Level.SEVERE, null, ex);
-//            model.addAttribute("errorMessage", ex.getMessage());
-//            return "error";
-//        }
-//    }
 
-    @GetMapping("/payment/cancel")
-    public String cancelPay() {
-        return "cancel";
-        
-    }
 
-   
-    
-//    @PostMapping("/authorize_payment")
-//    public String authorizePayment(@ModelAttribute OrderDetail orderDetail, Model model){
-//        System.out.println("OrderDetail="+orderDetail);
-//        try {
-//            String approvalLink = pservice.authorizePayment(orderDetail);
-//            System.out.println("approvalLink==="+approvalLink);
-//            return "redirect:"+approvalLink;
-//            
-//        } catch (PayPalRESTException ex) {
-//            Logger.getLogger(PaypalController.class.getName()).log(Level.SEVERE, null, ex);
-//            model.addAttribute("errorMessage", ex.getMessage());
-//            return "error";
-//        }
-//    }
-    
-//    @GetMapping("/review_payment")
-//    public String reviewPayment(Model model,
-//                                @RequestParam("paymentId") String paymentId,
-//                                @RequestParam("PayerID") String payerId) {
-//        try {
-//            Payment payment = pservice.getPaymentDetails(paymentId);
-//            PayerInfo payerInfo = payment.getPayer().getPayerInfo();
-//            Transaction transaction = payment.getTransactions().get(0);
-//            ShippingAddress shippingAddress = transaction.getItemList().getShippingAddress();
-//            model.addAttribute("paymentId", paymentId);
-//            model.addAttribute("PayerID", payerId);
-//            model.addAttribute("payer", payerInfo);
-//            model.addAttribute("transaction", transaction);
-//            model.addAttribute("shippingAddress", shippingAddress);
-//            return "review";
-//            } catch (PayPalRESTException ex) {
-//            Logger.getLogger(PaypalController.class.getName()).log(Level.SEVERE, null, ex);
-//            model.addAttribute("errorMessage", ex.getMessage());
-//            return "error";
-//        }
-//    }
-    @PostMapping("/execute_payment")
-    public String executePayment(Model model,
-                                 @RequestParam("paymentId") String paymentId,
-                                 @RequestParam("PayerID") String payerId){
-        try {
-            Payment payment = pservice.executePayment(paymentId, payerId);
-            PayerInfo payerInfo = payment.getPayer().getPayerInfo();
-            Transaction transaction = payment.getTransactions().get(0);
-            model.addAttribute("payer", payerInfo);
-            model.addAttribute("transaction", transaction);
-            return "receipt";
-        } catch (PayPalRESTException ex) {
-            Logger.getLogger(PaypalController.class.getName()).log(Level.SEVERE, null, ex);
-            model.addAttribute("errorMessage", ex.getMessage());
-            return "error";
-        }
-    }
+
     
 }

@@ -45,6 +45,7 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\contr
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\BrandDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ContactDaoImpl.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\TagsService.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\UserController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\ChatInput.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Brand.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\service\BrandService.java
@@ -53,6 +54,7 @@ C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\confi
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\config\PaypalConfig.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\ProductEditor.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\ShipmentInfo.java
+C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\controller\EditController.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Sizes.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\entities\Role.java
 C:\Users\Alex\Documents\GitHub\groupProjectLast\src\main\java\com\gymgroup\dao\ShipmentInfoDaoImpl.java

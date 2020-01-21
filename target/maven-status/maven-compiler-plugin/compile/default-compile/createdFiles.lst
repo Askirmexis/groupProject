@@ -22,6 +22,7 @@ com\gymgroup\config\PaypalConfig.class
 com\gymgroup\controller\ProductController.class
 com\gymgroup\service\OrdersService.class
 com\gymgroup\model\OrderDetail.class
+com\gymgroup\controller\UserController.class
 com\gymgroup\service\ShipmentInfoService.class
 com\gymgroup\service\UserService.class
 com\gymgroup\entities\Contact.class
@@ -64,6 +65,7 @@ com\gymgroup\dao\ContactDao.class
 com\gymgroup\entities\ChatOutput.class
 com\gymgroup\config\MyWebSecurityConfigurer.class
 com\gymgroup\entities\Orderdetails.class
+com\gymgroup\controller\EditController.class
 com\gymgroup\dao\CategoriesDaoImpl.class
 com\gymgroup\config\MyWebAppInitializer.class
 com\gymgroup\entities\User.class

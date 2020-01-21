@@ -15,4 +15,6 @@ import com.gymgroup.entities.User;
     public User findByUsername(String username);
 
     public void save(User user);
+
+    public void update(int id, User u);
 }

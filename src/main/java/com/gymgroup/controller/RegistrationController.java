@@ -35,6 +35,8 @@ public class RegistrationController {
         return "registration-form";
     }
     
+    
+    
     @ModelAttribute("roloi")
     public List<Role> fereRoles(){
         

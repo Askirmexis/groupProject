@@ -191,7 +191,7 @@
                                     <a href="#" style="color: grey;">
                                         < Return to cart</a> </div> <div class="col-6" style="padding-left:0;">
                                     <button type="submit" id="payButton" class="btn btn-success"
-                                            style="border-radius: 0;background-color: olivedrab;width:100%">Pay</button>
+                                            style="border-radius: 0;background-color: olivedrab;width:100%">Checkout</button>
                                 </div>
                             </div>
                         </div>

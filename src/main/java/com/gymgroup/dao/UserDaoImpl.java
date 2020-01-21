@@ -63,4 +63,28 @@ public class UserDaoImpl implements UserDao {
 //         q.setParameter("userid", user.getUserID());
     }
 
+    @Override
+    public void update(int id, User u) {
+        User u2 = getSession().byId(User.class).load(id);
+        if(u.getCountry()!= null){
+        u2.setCountry(u.getCountry());}
+        if(u.getEmail()!= null){
+        u2.setEmail(u.getEmail());}
+        if(u.getFname() != null){
+        u2.setFname(u.getFname());}
+        if(u.getLname() != null){
+        u2.setLname(u.getLname());}
+        if(u.getPassword() != null){
+        u2.setPassword(u.getPassword());}
+        if(u.getStreetNumber() != 0){
+        u2.setStreetNumber(u.getStreetNumber());}
+        if(u.getStreet() != null){
+        u2.setStreet(u.getStreet());}
+        if(u.getUsername() != null){
+        u2.setUsername(u.getUsername());}
+        if(u.getZip() != 0){
+        u2.setZip(u.getZip());}
+        getSession().update(u2);
+    }
+
 }
